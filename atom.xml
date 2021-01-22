@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>马志强的博客</title>
+  <title>孑孓不独活</title>
   
-  
+  <subtitle>生活就像大姨妈</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-17T16:24:59.386Z</updated>
+  <updated>2021-01-22T14:46:29.504Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>马志强</name>
+    <name>孑孓不独活</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1</title>
+    <link href="http://example.com/2021/01/22/1/"/>
+    <id>http://example.com/2021/01/22/1/</id>
+    <published>2021-01-22T14:38:45.000Z</published>
+    <updated>2021-01-22T14:46:29.504Z</updated>
+    
+    <content type="html"><![CDATA[<p>C++ 循环<br>有的时候，可能需要多次执行同一块代码。一般情况下，语句是顺序执行的：函数中的第一个语句先执行，接着是第二个语句，依此类推。</p><p>编程语言提供了允许更为复杂的执行路径的多种控制结构。</p><p>循环语句允许我们多次执行一个语句或语句组，下面是大多数编程语言中循环语句的一般形式：<br><img src="https://www.runoob.com/wp-content/uploads/2015/12/loop.png" alt="avatar"><br>循环类型<br>C++ 编程语言提供了以下几种循环类型。点击链接查看每个类型的细节。</p><p>循环类型    描述<br>while 循环    当给定条件为真时，重复语句或语句组。它会在执行循环主体之前测试条件。<br>for 循环    多次执行一个语句序列，简化管理循环变量的代码。<br>do…while 循环    除了它是在循环主体结尾测试条件外，其他与 while 语句类似。<br>嵌套循环    您可以在 while、for 或 do..while 循环内使用一个或多个循环。</p><p>循环控制语句<br>循环控制语句更改执行的正常序列。当执行离开一个范围时，所有在该范围中创建的自动对象都会被销毁。</p><p>C++ 提供了下列的控制语句。点击链接查看每个语句的细节。</p><p>控制语句    描述<br>break 语句    终止 loop 或 switch 语句，程序流将继续执行紧接着 loop 或 switch 的下一条语句。<br>continue 语句    引起循环跳过主体的剩余部分，立即重新开始测试条件。<br>goto 语句    将控制转移到被标记的语句。但是不建议在程序中使用 goto 语句。<br>判断语句<br>C++ 编程语言提供了以下类型的判断语句。点击链接查看每个语句的细节。</p><p>语句    描述<br>if 语句    一个 if 语句 由一个布尔表达式后跟一个或多个语句组成。<br>if…else 语句    一个 if 语句 后可跟一个可选的 else 语句，else 语句在布尔表达式为假时执行。<br>嵌套 if 语句    您可以在一个 if 或 else if 语句内使用另一个 if 或 else if 语句。<br>switch 语句    一个 switch 语句允许测试一个变量等于多个值时的情况。<br>嵌套 switch 语句    您可以在一个 switch 语句内使用另一个 switch 语句。</p><p>定义结构<br>为了定义结构，您必须使用 struct 语句。struct 语句定义了一个包含多个成员的新的数据类型，struct 语句的格式如下：<br>struct type_name {<br>member_type1 member_name1;<br>member_type2 member_name2;<br>member_type3 member_name3;<br>.<br>.<br>} object_names;<br>type_name 是结构体类型的名称，member_type1 member_name1 是标准的变量定义，比如 int i; 或者 float f; 或者其他有效的变量定义。在结构定义的末尾，最后一个分号之前，您可以指定一个或多个结构变量，这是可选的。下面是声明一个结构体类型 Books，变量为 book：<br>struct Books<br>{<br>   char  title[50];<br>   char  author[50];<br>   char  subject[100];<br>   int   book_id;<br>} book;<br>访问结构成员<br>为了访问结构的成员，我们使用成员访问运算符（.）。成员访问运算符是结构变量名称和我们要访问的结构成员之间的一个句号。</p><p>下面的实例演示了结构的用法：<br>#include <iostream><br>#include <cstring></p><p>using namespace std;</p><p>// 声明一个结构体类型 Books<br>struct Books<br>{<br>   char  title[50];<br>   char  author[50];<br>   char  subject[100];<br>   int   book_id;<br>};</p><p>int main( )<br>{<br>   Books Book1;        // 定义结构体类型 Books 的变量 Book1<br>   Books Book2;        // 定义结构体类型 Books 的变量 Book2</p><p>   // Book1 详述<br>   strcpy( Book1.title, “C++ 教程”);<br>   strcpy( Book1.author, “Runoob”);<br>   strcpy( Book1.subject, “编程语言”);<br>   Book1.book_id = 12345;</p><p>   // Book2 详述<br>   strcpy( Book2.title, “CSS 教程”);<br>   strcpy( Book2.author, “Runoob”);<br>   strcpy( Book2.subject, “前端技术”);<br>   Book2.book_id = 12346;</p><p>   // 输出 Book1 信息<br>   cout &lt;&lt; “第一本书标题 : “ &lt;&lt; Book1.title &lt;&lt;endl;<br>   cout &lt;&lt; “第一本书作者 : “ &lt;&lt; Book1.author &lt;&lt;endl;<br>   cout &lt;&lt; “第一本书类目 : “ &lt;&lt; Book1.subject &lt;&lt;endl;<br>   cout &lt;&lt; “第一本书 ID : “ &lt;&lt; Book1.book_id &lt;&lt;endl;</p><p>   // 输出 Book2 信息<br>   cout &lt;&lt; “第二本书标题 : “ &lt;&lt; Book2.title &lt;&lt;endl;<br>   cout &lt;&lt; “第二本书作者 : “ &lt;&lt; Book2.author &lt;&lt;endl;<br>   cout &lt;&lt; “第二本书类目 : “ &lt;&lt; Book2.subject &lt;&lt;endl;<br>   cout &lt;&lt; “第二本书 ID : “ &lt;&lt; Book2.book_id &lt;&lt;endl;</p><p>   return 0;<br>}<br>结构作为函数参数<br>您可以把结构作为函数参数，传参方式与其他类型的变量或指针类似。您可以使用上面实例中的方式来访问结构变量：<br>#include <iostream><br>#include <cstring></p><p>using namespace std;<br>void printBook( struct Books book );</p><p>// 声明一个结构体类型 Books<br>struct Books<br>{<br>   char  title[50];<br>   char  author[50];<br>   char  subject[100];<br>   int   book_id;<br>};</p><p>int main( )<br>{<br>   Books Book1;        // 定义结构体类型 Books 的变量 Book1<br>   Books Book2;        // 定义结构体类型 Books 的变量 Book2</p><pre><code>// Book1 详述</code></pre><p>   strcpy( Book1.title, “C++ 教程”);<br>   strcpy( Book1.author, “Runoob”);<br>   strcpy( Book1.subject, “编程语言”);<br>   Book1.book_id = 12345;</p><p>   // Book2 详述<br>   strcpy( Book2.title, “CSS 教程”);<br>   strcpy( Book2.author, “Runoob”);<br>   strcpy( Book2.subject, “前端技术”);<br>   Book2.book_id = 12346;</p><p>   // 输出 Book1 信息<br>   printBook( Book1 );</p><p>   // 输出 Book2 信息<br>   printBook( Book2 );</p><p>   return 0;<br>}<br>void printBook( struct Books book )<br>{<br>   cout &lt;&lt; “书标题 : “ &lt;&lt; book.title &lt;&lt;endl;<br>   cout &lt;&lt; “书作者 : “ &lt;&lt; book.author &lt;&lt;endl;<br>   cout &lt;&lt; “书类目 : “ &lt;&lt; book.subject &lt;&lt;endl;<br>   cout &lt;&lt; “书 ID : “ &lt;&lt; book.book_id &lt;&lt;endl;<br>}<br>指向结构的指针<br>您可以定义指向结构的指针，方式与定义指向其他类型变量的指针相似，如下所示：</p><p>struct Books *struct_pointer;<br>现在，您可以在上述定义的指针变量中存储结构变量的地址。为了查找结构变量的地址，请把 &amp; 运算符放在结构名称的前面，如下所示：</p><p>struct_pointer = &Book1;<br>为了使用指向该结构的指针访问结构的成员，您必须使用 -&gt; 运算符，如下所示：</p><p>struct_pointer-&gt;title;<br>让我们使用结构指针来重写上面的实例，这将有助于您理解结构指针的概念：<br>实例<br>#include <iostream><br>#include <cstring></p><p>using namespace std;<br>void printBook( struct Books *book );</p><p>struct Books<br>{<br>   char  title[50];<br>   char  author[50];<br>   char  subject[100];<br>   int   book_id;<br>};</p><p>int main( )<br>{<br>   Books Book1;        // 定义结构体类型 Books 的变量 Book1<br>   Books Book2;        // 定义结构体类型 Books 的变量 Book2</p><pre><code>// Book1 详述</code></pre><p>   strcpy( Book1.title, “C++ 教程”);<br>   strcpy( Book1.author, “Runoob”);<br>   strcpy( Book1.subject, “编程语言”);<br>   Book1.book_id = 12345;</p><p>   // Book2 详述<br>   strcpy( Book2.title, “CSS 教程”);<br>   strcpy( Book2.author, “Runoob”);<br>   strcpy( Book2.subject, “前端技术”);<br>   Book2.book_id = 12346;</p><p>   // 通过传 Book1 的地址来输出 Book1 信息<br>   printBook( &amp;Book1 );</p><p>   // 通过传 Book2 的地址来输出 Book2 信息<br>   printBook( &amp;Book2 );</p><p>   return 0;<br>}<br>// 该函数以结构指针作为参数<br>void printBook( struct Books *book )<br>{<br>   cout &lt;&lt; “书标题  : “ &lt;&lt; book-&gt;title &lt;&lt;endl;<br>   cout &lt;&lt; “书作者 : “ &lt;&lt; book-&gt;author &lt;&lt;endl;<br>   cout &lt;&lt; “书类目 : “ &lt;&lt; book-&gt;subject &lt;&lt;endl;<br>   cout &lt;&lt; “书 ID : “ &lt;&lt; book-&gt;book_id &lt;&lt;endl;<br>}<br>当上面的代码被编译和执行时，它会产生下列结果：</p><p>书标题  : C++ 教程<br>书作者 : Runoob<br>书类目 : 编程语言<br>书 ID : 12345<br>书标题  : CSS 教程<br>书作者 : Runoob<br>书类目 : 前端技术<br>书 ID : 12346<br>typedef 关键字<br>下面是一种更简单的定义结构的方式，您可以为创建的类型取一个”别名”。例如：</p><p>typedef struct Books<br>{<br>   char  title[50];<br>   char  author[50];<br>   char  subject[100];<br>   int   book_id;<br>}Books;</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;C++ 循环&lt;br&gt;有的时候，可能需要多次执行同一块代码。一般情况下，语句是顺序执行的：函数中的第一个语句先执行，接着是第二个语句，依此类推。&lt;/p&gt;
+&lt;p&gt;编程语言提供了允许更为复杂的执行路径的多种控制结构。&lt;/p&gt;
+&lt;p&gt;循环语句允许我们多次执行一个语句或语句组，下面是</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
