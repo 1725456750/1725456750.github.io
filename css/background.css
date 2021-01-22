@@ -1,8 +1,0 @@
-#web_bg {
-  /* 背景图像的地址（https://www.antmoe.com/photo/wallpaper/）  */
-  background: url(https://cdn.jsdelivr.net/gh/blogimg/picbed@master/2020/04/11/c6b22f86dc9a3549aea3e8b9ab1f8948.png);
-  /* 背景图像不重复 */
-  background-repeat: no-repeat;
-  /* 背景图像大小 */
-  background-size: cover;
-}
